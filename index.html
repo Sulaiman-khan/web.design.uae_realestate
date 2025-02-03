@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate flare</title>
+    <link rel="stylesheet" href="assets/scss/style.css">
+    <link rel="stylesheet" href="assets/scss/responsive.css">
+    <link rel="stylesheet" href="assets/scss/all.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg p-0">
+        <div class="container-fluid px-3">
+          <a class="navbar-brand m-0 p-0" href="index.html">
+            <img src="assets/images/logo.png" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto gap-4">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="listing.html">Sale</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="listing.html">Rent</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="Advisors.html">Advisors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="d-block d-lg-flex right-side">
+                <a href="login.html" class="main-btn d-block d-lg-inline mb-3 mb-lg-0"><i class="fa-solid fa-right-to-bracket me-2"></i>Login</a>
+                <a href="dashboard/add-property.html" class="main-btn d-block d-lg-inline"><i class="fa-solid fa-house-chimney me-2"></i> Add Listing</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+</header>
+<!-- =====================hero-section===================== -->
+<section class="hero-section position-relative">
+    <img src="assets/images/landing-bg.png" width="100%" alt="">
+    <div class="searchbar">
+        <div class="container">
+            <div class="search-sec">
+                <h1 class="fw-bold mb-4">Find Your Dream Place</h1>
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="pills-Sale-tab" data-bs-toggle="pill" data-bs-target="#pills-Sale" type="button" role="tab" aria-controls="pills-Sale" aria-selected="true">Sale</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-Rent-tab" data-bs-toggle="pill" data-bs-target="#pills-Rent" type="button" role="tab" aria-controls="pills-Rent" aria-selected="false">Rent</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-Sale" role="tabpanel" aria-labelledby="pills-Sale-tab" tabindex="0">
+                        <div class="srch-form">
+                            <form action="">
+                                <div class="row align-items-end">
+                                    <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4 mb-lg-0">
+                                        <div class="form-group">
+                                            <label for="">Select City</label>
+                                            <select name="city" id="" class="form-select">
+                                                <option value="Select">Select</option>
+                                                <option value="Rawalpindi">Rawalpindi</option>
+                                                <option value="Islamabad">Islamabad</option>
+                                                <option value="Lahore">Lahore</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4 mb-lg-0">
+                                        <div class="form-group">
+                                            <label for="">Property Status</label>
+                                            <select name="city" id="" class="form-select">
+                                                <option value="Select">Select</option>
+                                                <option value="Rawalpindi">Buy</option>
+                                                <option value="Islamabad">Rent</option>
+                                                <option value="Lahore">Sale</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4 mb-lg-0">
+                                        <div class="form-group">
+                                            <label for="">Property Type</label>
+                                            <select name="city" id="" class="form-select">
+                                                <option value="Select">Select</option>
+                                                <option value="Rawalpindi">House</option>
+                                                <option value="Islamabad">Apartment</option>
+                                                <option value="Lahore">Land</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4 mb-lg-0">
+                                        <div class="form-group">
+                                          <div>
+                                            <a href="listing.html" class="float-start main-btn"><i class="fa-solid fa-magnifying-glass me-2"></i> Find Now</a>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-Rent" role="tabpanel" aria-labelledby="pills-Rent-tab" tabindex="0">
+                      <div class="srch-form">
+                        <form action="">
+                            <div class="row align-items-end">
+                                <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="">Select City</label>
+                                        <select name="city" id="" class="form-select">
+                                            <option value="Select">Select</option>
+                                            <option value="Rawalpindi">Rawalpindi</option>
+                                            <option value="Islamabad">Islamabad</option>
+                                            <option value="Lahore">Lahore</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="">Property Status</label>
+                                        <select name="city" id="" class="form-select">
+                                            <option value="Select">Select</option>
+                                            <option value="Rawalpindi">Rawalpindi</option>
+                                            <option value="Islamabad">Islamabad</option>
+                                            <option value="Lahore">Lahore</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="">Property Type</label>
+                                        <select name="city" id="" class="form-select">
+                                            <option value="Select">Select</option>
+                                            <option value="Rawalpindi">Rawalpindi</option>
+                                            <option value="Islamabad">Islamabad</option>
+                                            <option value="Lahore">Lahore</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <button class="main-btn"><i class="fa-solid fa-magnifying-glass me-2"></i> Find Now</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =====================hero-section===================== -->
+<section class="heading text-center margin mb-4">
+  <div class="container">
+    <div class="row">
+      <h2 class="fw-bold">Properties by Cities</h2>
+      <p class="fs-6">Aliquam lacinia diam quis lacus euismod</p>
+    </div>
+  </div>
+</section>
+<section class="cities">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-xl-2 col-lg-2 col-md-4 col-sm-6 mb-4 mb-lg-0">
+        <div class="gallery">
+          <a href="listing.html">
+          <img src="assets/images/sharjah.jpg" width="600" height="400" alt="">
+          <div class="discription">
+            <p class="fw-bold">40+ Listing</p>
+            <h5 class="fw-bold">Sharjah</h5>
+            </div>
+          </a>
+          </div>
+      </div>
+      <div class="col-12 col-xl-2 col-lg-2 col-md-4 col-sm-6 mb-4 mb-lg-0">
+        <div class="city-single-listing">
+          <div class="gallery">
+            <a href="listing.html">
+            <img src="assets/images/al-Ain.png" width="600" height="400" alt="">
+            <div class="discription">
+              <p class="fw-bold">40+ Listing</p>
+              <h5 class="fw-bold">Al Ain</h5>
+              </div>
+            </a>
+            </div>
+            <div class="gallery">
+              <a href="listing.html">
+              <img src="assets/images/rasal-Khaimah.png" width="600" height="400" alt="">
+              <div class="discription">
+                <p class="fw-bold">40+ Listing</p>
+                <h5 class="fw-bold">Ras Al Khaimah</h5>
+                </div>
+              </a>
+              </div>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 col-lg-2 col-md-4 col-sm-6 mb-4 mb-lg-0">
+        <div class="gallery">
+          <a href="listing.html">
+          <img src="assets/images/abudhabi.png" width="600" height="400" alt="">
+          <div class="discription">
+            <p class="fw-bold">40+ Listing</p>
+            <h5 class="fw-bold">Abu Dhabi</h5>
+            </div>
+          </a>
+          </div>
+      </div>
+      <div class="col-12 col-xl-2 col-lg-2 col-md-4 col-sm-6 mb-4 mb-lg-0">
+        <div class="city-single-listing">
+          <div class="gallery">
+            <a href="listing.html">
+            <img src="assets/images/jebelali.png" width="600" height="400" alt="">
+            <div class="discription">
+              <p class="fw-bold">40+ Listing</p>
+              <h5 class="fw-bold">Jebel Ali</h5>
+              </div>
+            </a>
+            </div>
+            <div class="gallery">
+              <a href="listing.html">
+              <img src="assets/images/umm-Al-Quwain.png" width="600" height="400" alt="">
+              <div class="discription">
+                <p class="fw-bold">40+ Listing</p>
+                <h5 class="fw-bold">Umm-Al-Quwain</h5>
+                </div>
+              </a>
+              </div>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 col-lg-2 col-md-4 col-sm-6 mb-4 mb-lg-0">
+        <div class="gallery">
+          <a href="listing.html">
+          <img src="assets/images/ajman.png" width="600" height="400" alt="">
+          <div class="discription">
+            <p class="fw-bold">40+ Listing</p>
+            <h5 class="fw-bold">Ajman</h5>
+            </div>
+          </a>
+          </div>
+      </div>
+      <div class="col-12 col-xl-2 col-lg-2 col-md-4 col-sm-6">
+        <div class="gallery">
+          <a href="listing.html">
+          <img src="assets/images/fujairah.png" width="600" height="400" alt="">
+          <div class="discription">
+            <p class="fw-bold">40+ Listing</p>
+            <h5 class="fw-bold">Fujairah</h5>
+            </div>
+          </a>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======================About====================== -->
+<section class="home-about margin">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-xl-5 col-lg-5 col-md-6 col-sm-12 d-none d-lg-block">
+        <div class="about-img">
+          <img src="assets/images/about.png" class="w-100" alt="">
+        </div>
+      </div>
+      <div class="col-12 col-xl-6 col-sm-12 offset-xl-1">
+        <div class="heading mt-5 mt-md-0">
+          <p>Why Choose Us</p>
+          <h2 class="fw-bold">The Leading Real Estate Rental Marketplace</h2>
+        </div>
+        <div class="mt-4 h-about-items">
+          <div class="row row-cols-1">
+            <div class="col h-about-boxes d-block d-md-flex">
+              <div class="icon mb-4 mb-md-0">
+                <img src="assets/images/wide-range-01.png" alt="">
+              </div>
+              <div class="lower-text">
+                <h4>Wide Range Of Properties</h4>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint laboriosam reprehenderit esse, natus, eius hic, autem
+              </p>
+              </div>
+            </div>
+            <div class="col h-about-boxes d-block d-md-flex">
+              <div class="icon mb-4 mb-md-0">
+                <img src="assets/images/trusted-01.png" alt="">
+              </div>
+              <div class="lower-text">
+                <h4>Trusted by thousands</h4>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint laboriosam reprehenderit esse, natus, eius hic, autem
+              </p>
+              </div>
+            </div>
+            <div class="col h-about-boxes d-block d-md-flex">
+              <div class="icon mb-4 mb-md-0">
+                <img src="assets/images/finance-01.png" alt="">
+              </div>
+              <div class="lower-text">
+                <h4>Financing made easy</h4>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint laboriosam reprehenderit esse, natus, eius hic, autem
+              </p>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======================About====================== -->
+<!-- ======================featured-property====================== -->
+<section class="heading margin mb-4">
+  <div class="container">
+    <div class="row">
+      <div class="d-md-flex justify-content-between align-items-end">
+        <div>
+          <h2 class="fw-bold">Featured Properties</h2>
+          <p class="fs-6 m-0">Aliquam lacinia diam quis lacus euismod</p>
+        </div>
+      <div>
+        <a href="listing.html" class="float-lg-end d-inline-block ms-0">View All <i class="fa-solid fa-arrow-up-long"></i></a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+<section class="property-listing">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-4">
+      <div class="col">
+        <div class="listing">
+          <div class="property-img">
+            <p class="tag">Rent</p>
+            <a href="" class="fvrt">
+              <i class="fa-solid fa-heart"></i>
+            </a>
+            <img src="assets/images/p-1.jpg" class="w-100" alt="property-img">
+          </div>
+          <div class="lower-text mt-3">
+            <a href="property-detail.html" class="text-dark">
+              <p class="fw-bold">$14,000</p>
+              <h6 class="fw-bold text-truncate">Equestrian Family Home</h6>
+              <p class="text-black-50 address text-truncate">Sharjah Garden City</p>
+              <div class="d-flex justify-content-between text-black-50 fs-6 fw-light detail">
+                <p class="m-0"><i class="fa-solid fa-bed"></i> 2 beds</p>
+                <p class="m-0"><i class="fa-solid fa-sink"></i> 4 baths</p>
+                <p class="m-0"><i class="fa-solid fa-vector-square"></i> 1200 sqft</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="listing">
+          <div class="property-img">
+            <p class="tag">Sale</p>
+            <a href="" class="fvrt">
+              <i class="fa-solid fa-heart"></i>
+            </a>
+            <img src="assets/images/p-2.jpg" class="w-100" alt="property-img">
+          
+          </div>
+          <div class="lower-text mt-3">
+            <a href="property-detail.html" class="text-dark">
+              <p class="fw-bold">$14,000</p>
+              <h6 class="fw-bold text-truncate">Equestrian Family Home</h6>
+              <p class="address text-black-50 text-truncate">Sharjah Garden City</p>
+              <div class="d-flex justify-content-between text-black-50 fs-6 fw-light detail">
+                <p class="m-0"><i class="fa-solid fa-bed"></i> 2 beds</p>
+                <p class="m-0"><i class="fa-solid fa-sink"></i> 4 baths</p>
+                <p class="m-0"><i class="fa-solid fa-vector-square"></i> 1200 sqft</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="listing">
+          <div class="property-img">
+            <p class="tag">Rent</p>
+            <a href="" class="fvrt">
+              <i class="fa-solid fa-heart"></i>
+            </a>
+            <img src="assets/images/p-3.jpg" class="w-100" alt="property-img">
+          
+          </div>
+          <div class="lower-text mt-3">
+            <a href="property-detail.html" class="text-dark">
+              <p class="fw-bold">$14,000</p>
+              <h6 class="fw-bold text-truncate">Equestrian Family Home</h6>
+              <p class="address text-black-50 text-truncate">Sharjah Garden City</p>
+              <div class="d-flex justify-content-between text-black-50 fs-6 fw-light detail">
+                <p class="m-0"><i class="fa-solid fa-bed"></i> 2 beds</p>
+                <p class="m-0"><i class="fa-solid fa-sink"></i> 4 baths</p>
+                <p class="m-0"><i class="fa-solid fa-vector-square"></i> 1200 sqft</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="listing">
+          <div class="property-img">
+            <p class="tag">Rent</p>
+            <a href="" class="fvrt">
+              <i class="fa-solid fa-heart"></i>
+            </a>
+            <img src="assets/images/p-4.jpg" class="w-100" alt="property-img">
+          
+          </div>
+          <div class="lower-text mt-3">
+            <a href="property-detail.html" class="text-dark">
+              <p class="fw-bold">$14,000</p>
+              <h6 class="fw-bold text-truncate">Equestrian Family Home</h6>
+              <p class="address text-black-50 text-truncate">Sharjah Garden City</p>
+              <div class="d-flex justify-content-between text-black-50 fs-6 fw-light detail">
+                <p class="m-0"><i class="fa-solid fa-bed"></i> 2 beds</p>
+                <p class="m-0"><i class="fa-solid fa-sink"></i> 4 baths</p>
+                <p class="m-0"><i class="fa-solid fa-vector-square"></i> 1200 sqft</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======================featured-property====================== -->
+<!-- ======================property-type====================== -->
+<section class="proprty-type margin">
+  <div class="container">
+    <div class="row">
+      <div class="heading text-center mb-5">
+        <h2 class="fw-bold text-white">Explore Apartment Types</h2>
+          <p class="fs-6 m-0 text-white">Aliquam lacinia diam quis lacus euismod</p>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5">
+      <div class="col mb-4">
+        <a href="listing.html">
+          <div class="proprty-item">
+            <div class="icon">
+              <i class="fa-solid fa-house"></i>
+            </div>
+            <div class="lower-text text-white">
+              <h5 class="fw-bold">Houses</h5>
+              <p class="fw-bold">22 Properties</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col mb-4">
+        <a href="listing.html">
+          <div class="proprty-item">
+            <div class="icon">
+              <i class="fa-solid fa-city"></i>
+            </div>
+            <div class="lower-text text-white">
+              <h5 class="fw-bold">Apartments</h5>
+              <p class="fw-bold">22 Properties</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col mb-4">
+        <a href="listing.html">
+          <div class="proprty-item">
+            <div class="icon">
+              <i class="fa-solid fa-building"></i>
+            </div>
+            <div class="lower-text text-white">
+              <h5 class="fw-bold">Offices</h5>
+              <p class="fw-bold">22 Properties</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col mb-4">
+        <a href="listing.html">
+          <div class="proprty-item">
+            <div class="icon">
+              <i class="fa-solid fa-vihara"></i>
+            </div>
+            <div class="lower-text text-white">
+              <h5 class="fw-bold">Villas</h5>
+              <p class="fw-bold">22 Properties</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="listing.html">
+          <div class="proprty-item">
+            <div class="icon">
+              <i class="fa-solid fa-warehouse"></i>
+            </div>
+            <div class="lower-text text-white">
+              <h5 class="fw-bold">Warehouse</h5>
+              <p class="fw-bold">22 Properties</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======================property-type====================== -->
+<!-- ======================Advisors====================== -->
+<section class="heading margin mb-4">
+  <div class="container">
+    <div class="row">
+      <div class="d-flex justify-content-between align-items-end">
+        <div>
+          <h2 class="fw-bold">Meet Properties Advisors</h2>
+          <p class="fs-6 m-0">Aliquam lacinia diam quis lacus euismod</p>
+        </div>
+      <div>
+        <a href="listing.html" class="float-end">View All <i class="fa-solid fa-arrow-up-long"></i></a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="hm-Advisors">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+      <div class="col">
+          <div class="hm-Advisors-box">
+            <div class="hm-agent-img">
+              <img src="assets/images/agent-1.jpg" class="object-fit-cover w-100 h-100" alt="">
+              <div class="hm-agent-media">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <a href="Advisors-detail.html">
+            <div class="lower-text mt-3">
+              <h6 class="fw-bold m-0">Arlene McCoy</h6>
+              <p class="fw-bold text-black-50">Real Estate Broker</p>
+            </div>
+          </a>
+          </div>
+      </div>
+      <div class="col">
+          <div class="hm-Advisors-box">
+            <div class="hm-agent-img">
+              <img src="assets/images/agent-2.jpg" class="object-fit-cover w-100 h-100" alt="">
+              <div class="hm-agent-media">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <a href="Advisors-detail.html">
+            <div class="lower-text mt-3">
+              <h6 class="fw-bold m-0">Arlene McCoy</h6>
+              <p class="fw-bold text-black-50">Real Estate Broker</p>
+            </div>
+          </a>
+          </div>
+      </div>
+      <div class="col">
+          <div class="hm-Advisors-box">
+            <div class="hm-agent-img">
+              <img src="assets/images/agent-3.jpg" class="object-fit-cover w-100 h-100" alt="">
+              <div class="hm-agent-media">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <a href="Advisors-detail.html">
+            <div class="lower-text mt-3">
+              <h6 class="fw-bold m-0">Arlene McCoy</h6>
+              <p class="fw-bold text-black-50">Real Estate Broker</p>
+            </div>
+          </a>
+          </div>
+      </div>
+      <div class="col">
+          <div class="hm-Advisors-box">
+            <div class="hm-agent-img">
+              <img src="assets/images/agent-4.jpg" class="object-fit-cover w-100 h-100" alt="">
+              <div class="hm-agent-media">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <a href="Advisors-detail.html">
+            <div class="lower-text mt-3">
+              <h6 class="fw-bold m-0">Arlene McCoy</h6>
+              <p class="fw-bold text-black-50">Real Estate Broker</p>
+            </div>
+          </a>
+          </div>
+      </div>
+      <div class="col">
+          <div class="hm-Advisors-box">
+            <div class="hm-agent-img">
+              <img src="assets/images/agent-2.jpg" class="object-fit-cover w-100 h-100" alt="">
+              <div class="hm-agent-media">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <a href="Advisors-detail.html">
+            <div class="lower-text mt-3">
+              <h6 class="fw-bold m-0">Arlene McCoy</h6>
+              <p class="fw-bold text-black-50">Real Estate Broker</p>
+            </div>
+          </a>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======================Advisors====================== -->
+<!-- ======================explore====================== -->
+<section class="hm-explore margin">
+  <div class="container">
+    <div class="row">
+      <div class="explore-box d-block d-md-flex justify-content-between align-items-center py-5 px-5">
+        <div>
+          <h2 class="text-white fw-bold">Looking for a dream home?</h2>
+          <p class="m-0 text-white fw-bold">We help you make the dream of new house a reality</p>
+        </div>
+        <div>
+          <a href="listing.html" class="secondary-btn float-end">Explore Properties <i class="fa-solid fa-arrow-up-long"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======================explore====================== -->
+<!-- ======================footer====================== -->
+<section class="footer-style pt-5 pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="footer-widget mb-4 mb-lg-5">
+          <a class="footer-logo" href="index.html"><img class="mb-4" src="assets/images/white-logo.png" alt=""></a>
+          <div class="row mb-4 mb-lg-5">
+            <div class="col-auto">
+              <div class="contact-info">
+                <p class="info-title">Total Free Customer Care</p>
+                <h6 class="info-phone"><a href="+(0)-123-050-945-02">+(0) 123 050 945 02</a></h6>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="contact-info">
+                <p class="info-title">Nee Live Support?</p>
+                <h6 class="info-mail"><a href="mailto:hi@Realestate.com">hi@Realestate.com</a></h6>
+              </div>
+            </div>
+          </div>
+          <div class="app-widget">
+            <h5 class="title text-white mb-4 fw-bold">Apps</h5>
+            <div class="row mb-4 mb-lg-5">
+              <div class="col-auto">
+                <a href="">
+                  <div class="app-info d-flex align-items-center mb-3">
+                    <div class="flex-shrink-0">
+                      <i class="fab fa-apple fs-2 text-white"></i>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <p class="app-text text-white-50 fw-bold">Download on the</p>
+                      <h6 class="app-title text-white fw-bold">Apple Store</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-auto">
+                <a href="">
+                  <div class="app-info d-flex align-items-center mb10">
+                    <div class="flex-shrink-0">
+                      <i class="fab fa-google-play fs-4 text-white"></i>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <p class="app-text text-white-50 fw-bold">Get in on</p>
+                      <h6 class="app-title text-white fw-bold">Google Play</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="social-widget">
+            <h6 class="text-white mb-4 fw-bold">Follow us on social media</h6>
+            <div class="social-style1">
+              <a href=""><i class="fab fa-facebook-f list-inline-item"></i></a>
+              <a href=""><i class="fab fa-twitter list-inline-item"></i></a>
+              <a href=""><i class="fab fa-instagram list-inline-item"></i></a>
+              <a href=""><i class="fab fa-linkedin-in list-inline-item"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="footer-widget mb-4 mb-lg-5">
+          <div class="mailchimp-widget mb-4 mb-lg-5">
+            <h6 class="title text-white fw-bold mb-4">Keep Yourself Up to Date</h6>
+            <div class="mailchimp-style1">
+              <input type="email" class="form-control" placeholder="Your Email">
+              <button type="submit">Subscribe</button>
+            </div>
+          </div>
+          <div class="row justify-content-between">
+            <div class="col-auto">
+              <div class="link-style mb-3">
+                <h6 class="text-white mb-4 fw-bold">Popular Search</h6>
+                <ul class="ps-0">
+                  <li><a href="listing.html">Apartment for Rent</a></li>
+                  <li><a href="listing.html">House for Rent</a></li>
+                  <li><a href="listing.html">Offices for Buy</a></li>
+                  <li><a href="listing.html">Offices for Rent</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="link-style mb-3">
+                <h6 class="text-white mb-4">Quick Links</h6>
+                <ul class="ps-0">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="listing.html">Property for Sale</a></li>
+                  <li><a href="listing.html">Property for Rent</a></li>
+                  <li><a href="Advisors.html">Advisors</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="link-style mb-3">
+                <h6 class="text-white mb-4">Discover</h6>
+                <ul class="ps-0">
+                  <li><a href="listing.html">Rawalpindi</a></li>
+                  <li><a href="listing.html">Islamabad</a></li>
+                  <li><a href="listing.html">Lahore</a></li>
+                  <li><a href="listing.html">Karachi</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border-top border-light py-4">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="text-center text-lg-start">
+          <p class="copyright-text text-white">© Realestate - All rights reserved</p>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="text-center text-lg-end">
+          <p class="footer-menu text-white"><a class="text-white" href="#">Privacy</a> · <a class="text-white" href="#">Terms</a> · <a class="text-white" href="#">Sitemap</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======================footer====================== -->
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

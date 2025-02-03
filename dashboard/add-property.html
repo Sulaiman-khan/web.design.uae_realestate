@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - addproperty</title>
+    <link rel="stylesheet" href="assets/scss/style.css">
+    <link rel="stylesheet" href="assets/scss/responsive.css">
+    <link rel="stylesheet" href="assets/scss/all.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg p-0">
+        <div class="container-fluid px-3">
+          <a class="navbar-brand m-0 p-0" href="../index.html">
+            <img src="assets/images/logo.png" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto gap-4">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../listing.html">Sale</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../listing.html">Rent</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../Advisors.html">Advisors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="d-block d-lg-flex right-side">
+                <a href="../login.html" class="main-btn d-block d-lg-inline mb-3 mb-lg-0"><i class="fa-solid fa-right-to-bracket me-2"></i>Logout</a>
+                <a href="add-property.html" class="main-btn d-block d-lg-inline"><i class="fa-solid fa-house-chimney me-2"></i> Add Listing</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+</header>
+    <!-- ======================title-banner====================== -->
+    <section class="title-banner">
+       <div class="container">
+            <div class="row">
+                <h1 class="text-center text-white fw-bold">Add Property</h1>
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center m-0">
+                      <li class="breadcrumb-item"><a href="index.html" class="text-white">Dashboard</a></li>
+                      <li class="breadcrumb-item active text-white-50" aria-current="page">Add Property</li>
+                    </ol>
+                  </nav>
+            </div>
+       </div>
+    </section>
+    <!-- ======================title-banner====================== -->
+    <section class="dashbaord-wrapper margin">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-3 col-lg-4">
+            <div class="dash-nav">
+              <nav class="navbar navbar-expand-lg flex-row flex-lg-column align-items-start">
+                <p class="d-block d-lg-none m-0 ps-2">Dashboard Navbar</p>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashnav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                  </button>
+                  <div class="collapse navbar-collapse w-100" id="dashnav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-block w-100">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-shapes"></i> Dashboard</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="myproperty.html"><i class="fa-solid fa-house"></i> My Properties</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="../login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                      </li>
+                    </ul>
+                  </div>
+              </nav>
+            </div>
+          </div>
+          <div class="col-12 col-xl-9 col-lg-8">
+            <div class="dashboard-content">
+              <div class="wrapper-heading d-block d-md-flex justify-content-between align-items-center">
+                <h3>Add Properties</h3>
+              </div>
+              <div class="addproperty-data">
+                <h5 class="mb-4">Property Information</h5>
+                <div class="form">
+                  <form action="">
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">Property Title</label>
+                    </div>
+                    <div class="row row-cols-1 row-cols-lg-2">
+                      <div class="col mb-3">
+                        <div class="form-floating">
+                          <select class="form-select" id="floatingSelectGrid">
+                            <option selected>Property Type</option>
+                            <option value="1">House</option>
+                            <option value="2">Warehouse</option>
+                            <option value="3">Villa</option>
+                          </select>
+                          <label for="floatingSelectGrid">Property Type</label>
+                        </div>
+                      </div>
+                      <div class="col mb-3">
+                        <div class="form-floating">
+                          <select class="form-select" id="floatingSelectGrid">
+                            <option selected>Property Purpose</option>
+                            <option value="sale">For Sale</option>
+                            <option value="rent">For Rent</option>
+                          </select>
+                          <label for="floatingSelectGrid">Purpose</label>
+                        </div>
+                      </div>
+                      <div class="col mb-3">
+                        <div class="form-floating">
+                          <select class="form-select" id="floatingSelectGrid">
+                            <option selected>Rent Period</option>
+                            <option value="daily">Daily</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="yearly">Monthly</option>
+                          </select>
+                          <label for="floatingSelectGrid">Rent Period</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-floating mb-3">
+                          <input type="number" class="form-control" id="price" placeholder="Property Price">
+                          <label for="price">Property Price</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-floating mb-3">
+                          <input type="number" class="form-control" id="area" placeholder="Total Area">
+                          <label for="area">Total Area (Sqft)</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-floating mb-3">
+                          <input type="number" class="form-control" id="Unit" placeholder="Total Unit">
+                          <label for="Unit">Total Unit</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-floating mb-3">
+                          <input type="number" class="form-control" id="Bedrooms" placeholder="Bedrooms">
+                          <label for="Bedrooms">Bedrooms</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-floating mb-3">
+                          <input type="number" class="form-control" id="Bathrooms" placeholder="Bathrooms">
+                          <label for="Bathrooms">Bathrooms</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-floating mb-3">
+                          <input type="number" class="form-control" id="Garage" placeholder="Garage">
+                          <label for="Garage">Garage</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-floating mb-3">
+                          <input type="number" class="form-control" id="Kitchen" placeholder="Kitchen">
+                          <label for="Kitchen">Kitchen</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-floating">
+                      <textarea class="form-control" placeholder="Description" id="Description" style="height: 100px"></textarea>
+                      <label for="Description">Description</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col">
+                  <div class="addproperty-data mt-4">
+                    <h5 class="mb-4">Property Images</h5>
+                    <div class="property-img">
+                      <div class="upload__box">
+                        <div class="upload__btn-box">
+                          <label class="upload__btn">
+                            <div class="upload-img-box">
+                              <i class="fa-solid fa-cloud-arrow-up fs-3"></i>
+                              <p class="m-0">Choose File to upload</p>
+                            </div>
+                            <input type="file" multiple="" data-max_length="20" class="upload__inputfile">
+                          </label>
+                        </div>
+                        <div class="upload__img-wrap"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="addproperty-data mt-4">
+                    <h5 class="mb-4">Virtual Tour</h5>
+                    <div class="property-img">
+                      <div class="upload__box">
+                        <div class="upload__btn-box">
+                          <label class="upload__btn">
+                            <div class="upload-img-box">
+                              <i class="fa-solid fa-cloud-arrow-up fs-3"></i>
+                              <p class="m-0">Choose File to upload</p>
+                            </div>
+                            <input type="file" multiple="" data-max_length="20" class="upload__inputfile">
+                          </label>
+                        </div>
+                        <div class="upload__img-wrap"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="addproperty-data mt-4">
+                <h5 class="mb-4">Property Location</h5>
+                <div class="property-location">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.2657662876823!2d73.07777487545341!3d33.650274973310964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df9531e8645fb7%3A0xc8e84e8b0b7e270a!2sShamsabad%20Metrobus%20Station!5e0!3m2!1sen!2s!4v1689920377380!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+              <div class="addproperty-data mt-4">
+                <h5 class="mb-4">Aminities</h5>
+                <div class="aminities">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="Conditioning" value="AirConditioning">
+                    <label class="form-check-label" for="Conditioning"> Air Conditioning</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="Dryer" value="Dryer">
+                    <label class="form-check-label" for="Dryer"> Dryer</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="Gym" value="Gym">
+                    <label class="form-check-label" for="Gym"> Gym</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="SwimmingPool" value="SwimmingPool">
+                    <label class="form-check-label" for="SwimmingPool"> Swimming Pool</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="Wifi" value="Wifi">
+                    <label class="form-check-label" for="Wifi"> Wifi</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-floating">
+                <button class="main-btn m-0 mt-3"><i class="fa-solid fa-paper-plane"></i> Submit Property</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- ======================footer====================== -->
+<section class="footer-style pt-5 pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="footer-widget mb-4 mb-lg-5">
+          <a class="footer-logo" href="../index.html"><img class="mb-4" src="assets/images/white-logo.png" alt=""></a>
+          <div class="row mb-4 mb-lg-5">
+            <div class="col-auto">
+              <div class="contact-info">
+                <p class="info-title">Total Free Customer Care</p>
+                <h6 class="info-phone"><a href="+(0)-123-050-945-02">+(0) 123 050 945 02</a></h6>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="contact-info">
+                <p class="info-title">Nee Live Support?</p>
+                <h6 class="info-mail"><a href="mailto:hi@Realestate.com">hi@Realestate.com</a></h6>
+              </div>
+            </div>
+          </div>
+          <div class="app-widget">
+            <h5 class="title text-white mb-4 fw-bold">Apps</h5>
+            <div class="row mb-4 mb-lg-5">
+              <div class="col-auto">
+                <a href="">
+                  <div class="app-info d-flex align-items-center mb-3">
+                    <div class="flex-shrink-0">
+                      <i class="fab fa-apple fs-2 text-white"></i>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <p class="app-text text-white-50 fw-bold">Download on the</p>
+                      <h6 class="app-title text-white fw-bold">Apple Store</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-auto">
+                <a href="">
+                  <div class="app-info d-flex align-items-center mb10">
+                    <div class="flex-shrink-0">
+                      <i class="fab fa-google-play fs-4 text-white"></i>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <p class="app-text text-white-50 fw-bold">Get in on</p>
+                      <h6 class="app-title text-white fw-bold">Google Play</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="social-widget">
+            <h6 class="text-white mb-4 fw-bold">Follow us on social media</h6>
+            <div class="social-style1">
+              <a href=""><i class="fab fa-facebook-f list-inline-item"></i></a>
+              <a href=""><i class="fab fa-twitter list-inline-item"></i></a>
+              <a href=""><i class="fab fa-instagram list-inline-item"></i></a>
+              <a href=""><i class="fab fa-linkedin-in list-inline-item"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="footer-widget mb-4 mb-lg-5">
+          <div class="mailchimp-widget mb-4 mb-lg-5">
+            <h6 class="title text-white fw-bold mb-4">Keep Yourself Up to Date</h6>
+            <div class="mailchimp-style1">
+              <input type="email" class="form-control" placeholder="Your Email">
+              <button type="submit">Subscribe</button>
+            </div>
+          </div>
+          <div class="row justify-content-between">
+            <div class="col-auto">
+              <div class="link-style mb-3">
+                <h6 class="text-white mb-4 fw-bold">Popular Search</h6>
+                <ul class="ps-0">
+                  <li><a href="../listing.html">Apartment for Rent</a></li>
+                  <li><a href="../listing.html">House for Rent</a></li>
+                  <li><a href="../listing.html">Offices for Buy</a></li>
+                  <li><a href="../listing.html">Offices for Rent</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="link-style mb-3">
+                <h6 class="text-white mb-4">Quick Links</h6>
+                <ul class="ps-0">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../listing.html">Property for Sale</a></li>
+                  <li><a href="../listing.html">Property for Rent</a></li>
+                  <li><a href="../Advisors.html">Advisors</a></li>
+                  <li><a href="../about.html">About</a></li>
+                  <li><a href="../contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="link-style mb-3">
+                <h6 class="text-white mb-4">Discover</h6>
+                <ul class="ps-0">
+                  <li><a href="../listing.html">Rawalpindi</a></li>
+                  <li><a href="../listing.html">Islamabad</a></li>
+                  <li><a href="../listing.html">Lahore</a></li>
+                  <li><a href="../listing.html">Karachi</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border-top border-light py-4">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="text-center text-lg-start">
+          <p class="copyright-text text-white">© Realestate - All rights reserved</p>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="text-center text-lg-end">
+          <p class="footer-menu text-white"><a class="text-white" href="#">Privacy</a> · <a class="text-white" href="#">Terms</a> · <a class="text-white" href="#">Sitemap</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======================footer====================== -->
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/javascript/jquery.js"></script>
+  <script>
+    // ============img-preview
+// ============// ============// ============// ============// ============
+
+jQuery(document).ready(function () {
+  ImgUpload();
+});
+
+function ImgUpload() {
+  var imgWrap = "";
+  var imgArray = [];
+
+  $('.upload__inputfile').each(function () {
+    $(this).on('change', function (e) {
+      imgWrap = $(this).closest('.upload__box').find('.upload__img-wrap');
+      var maxLength = $(this).attr('data-max_length');
+
+      var files = e.target.files;
+      var filesArr = Array.prototype.slice.call(files);
+      var iterator = 0;
+      filesArr.forEach(function (f, index) {
+
+        if (!f.type.match('image.*')) {
+          return;
+        }
+
+        if (imgArray.length > maxLength) {
+          return false
+        } else {
+          var len = 0;
+          for (var i = 0; i < imgArray.length; i++) {
+            if (imgArray[i] !== undefined) {
+              len++;
+            }
+          }
+          if (len > maxLength) {
+            return false;
+          } else {
+            imgArray.push(f);
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+              var html = "<div class='upload__img-box'><div style='background-image: url(" + e.target.result + ")' data-number='" + $(".upload__img-close").length + "' data-file='" + f.name + "' class='img-bg'><div class='upload__img-close'></div></div></div>";
+              imgWrap.append(html);
+              iterator++;
+            }
+            reader.readAsDataURL(f);
+          }
+        }
+      });
+    });
+  });
+
+  $('body').on('click', ".upload__img-close", function (e) {
+    var file = $(this).parent().data("file");
+    for (var i = 0; i < imgArray.length; i++) {
+      if (imgArray[i].name === file) {
+        imgArray.splice(i, 1);
+        break;
+      }
+    }
+    $(this).parent().parent().remove();
+  });
+}
+  </script>
+  <!-- <script src="assets/javascript/javascript.js"></script> -->
+      
+</body>
+</html>
