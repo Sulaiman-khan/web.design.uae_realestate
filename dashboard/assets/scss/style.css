@@ -509,7 +509,7 @@ header .navbar .nav-item .nav-link {
 }
 
 .title-banner {
-  background-image: url(../images/bread-overlay.jpg);
+  background-image: url(../images/bread-overlay.webp);
   padding: 180px 0px 100px 0px;
 }
 
@@ -1104,7 +1104,7 @@ header .navbar .nav-item .nav-link {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url(../images/contact-pattern.jpg) no-repeat;
+  background: url(../images/contact-pattern.webp) no-repeat;
   background-size: 100% 100%;
   z-index: -1;
 }
@@ -1186,7 +1186,7 @@ header .navbar .nav-item .nav-link {
 }
 
 .counter .counter-bg {
-  background: url(../images/about.jpg) no-repeat center;
+  background: url(../images/about.webp) no-repeat center;
   padding: 150px 30px;
   background-size: cover;
   border-radius: 15px;
