@@ -1,9 +1,10 @@
 @media (min-width: 320px) and (max-width: 575px){
     .hero-section{
+        padding-bottom: 50px;
         .searchbar{
             position: relative;
             width: 100%;
-            transform: translate(0%, -10%);
+            transform: translate(0%, 15%);
             left: 0;
             top: 0;
 
@@ -54,10 +55,13 @@
 }
 @media (min-width: 576px) and (max-width: 991px){
     .hero-section{
+        padding-bottom: 50px;
         .searchbar{
+            position: relative;
             width: 100%;
-            transform: translate(0%, -14%);
+            transform: translate(0%, 25%);
             left: 0;
+            top: 0;
 
         }
     }
